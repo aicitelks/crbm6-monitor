@@ -3,7 +3,7 @@ name: Monitorar Convocações CRBM 6
 on:
   schedule:
     # Roda a cada 6 horas (horário UTC). Ajuste como quiser.
-    - cron: "0 */6 * * *"
+    - cron: "0 10,20 * * *"
   workflow_dispatch: {}  # permite rodar manualmente pelo botão "Run workflow"
 
 permissions:
