@@ -13,6 +13,10 @@ WhatsApp quando sair uma convocação nova.
    um alerta genérico avisando para conferir manualmente — assim você
    nunca perde uma atualização, mesmo se o layout do site mudar.
 
+### Foto atual
+A página encontra-se inicialmente com esse conteúdo:
+<img width="651" height="693" alt="image" src="https://github.com/user-attachments/assets/efcba591-42d1-4eab-8a07-4086a6cc7baf" />
+
 ## Passo 1 — Criar o repositório no GitHub
 
 1. Crie um repositório novo (pode ser privado) no GitHub, ex: `crbm6-monitor`.
