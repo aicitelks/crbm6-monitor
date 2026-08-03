@@ -61,12 +61,6 @@ controla o intervalo. Exemplos:
 - `"0 8,20 * * *"` → 2x por dia (8h e 20h UTC)
 - `"0 * * * *"` → a cada hora
 
-## Se o parser não achar as convocações certinho
+---
 
-Como o site bloqueia acesso automatizado para inspeção externa, o padrão
-de leitura (`monitor.py`, variável `CONVOCACAO_PATTERN`) foi construído
-com base no texto visível da página. Se as mensagens do WhatsApp vierem
-genéricas ("a página mudou, confira") em vez de listar a convocação
-específica, é só copiar um trecho do HTML da seção de convocações
-(Ctrl+U no navegador, ou "Inspecionar") e me mandar — eu ajusto o
-padrão do parser rapidinho.
+###### Feito com Claude, revisado por mim ;P
