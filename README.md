@@ -13,10 +13,6 @@ WhatsApp quando sair uma convocação nova.
    um alerta genérico avisando para conferir manualmente — assim você
    nunca perde uma atualização, mesmo se o layout do site mudar.
 
-### Foto atual
-A página encontra-se inicialmente com esse conteúdo:
-<img width="651" height="693" alt="image" src="https://github.com/user-attachments/assets/efcba591-42d1-4eab-8a07-4086a6cc7baf" />
-
 ## Passo 1 — Criar o repositório no GitHub
 
 1. Crie um repositório novo (pode ser privado) no GitHub, ex: `crbm6-monitor`.
@@ -28,7 +24,9 @@ Se quiser, faça isso direto pelo site do GitHub: clique em "Add file" →
 
 ## Passo 2 — Ativar o WhatsApp (CallMeBot)
 
-1. No seu celular, adicione o número **+34 644 59 71 65** aos contatos.
+1. No seu celular, adicione o número **+34 621 08 34 84** aos contatos
+   (esse número muda de vez em quando — se não funcionar, confira o
+   atual em https://www.callmebot.com/blog/free-api-whatsapp-messages/).
 2. Mande para esse número, pelo WhatsApp, a mensagem exata:
    `I allow callmebot to send me messages`
 3. Você vai receber uma resposta com sua **API Key** (um número).
@@ -65,6 +63,12 @@ controla o intervalo. Exemplos:
 - `"0 8,20 * * *"` → 2x por dia (8h e 20h UTC)
 - `"0 * * * *"` → a cada hora
 
----
+## Se o parser não achar as convocações certinho
 
-###### Feito com Claude, revisado por mim ;P
+Como o site bloqueia acesso automatizado para inspeção externa, o padrão
+de leitura (`monitor.py`, variável `CONVOCACAO_PATTERN`) foi construído
+com base no texto visível da página. Se as mensagens do WhatsApp vierem
+genéricas ("a página mudou, confira") em vez de listar a convocação
+específica, é só copiar um trecho do HTML da seção de convocações
+(Ctrl+U no navegador, ou "Inspecionar") e me mandar — eu ajusto o
+padrão do parser rapidinho.

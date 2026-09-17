@@ -25,7 +25,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-URL = "https://crbm6.gov.br/concursos/"
+URL = "https://crbm6.gov.br/concurso/"
 STATE_FILE = Path(__file__).parent / "state.json"
 
 # Padrão observado na página: "Convocação 09-07-26 · Advogado · AC-1º classificado"
@@ -110,7 +110,15 @@ def main():
     try:
         full_text = fetch_page_text()
     except Exception as e:
-        print(f"Erro ao buscar a página: {e}", file=sys.stderr)
+        erro_msg = (
+            "⚠️ CRBM 6 - Falha ao acessar a página de concursos.\n"
+            f"Erro: {e}\n\n"
+            f"URL monitorada: {URL}\n"
+            "Pode ser que o link tenha mudado de novo, ou o site esteja fora "
+            "do ar temporariamente. Vale conferir manualmente."
+        )
+        print(erro_msg, file=sys.stderr)
+        send_whatsapp(erro_msg)
         sys.exit(1)
 
     current_hash = text_hash(full_text)
