@@ -112,6 +112,10 @@ def main():
         sys.exit(1)
 
     state = load_state()
+    if not STATE_FILE.exists():
+        save_state({"seen_ids": []})
+        state = {"seen_ids": []}
+
     seen_ids = set(state.get("seen_ids", []))
 
     novos = [r for r in results if str(r.get("classPK")) not in seen_ids]
