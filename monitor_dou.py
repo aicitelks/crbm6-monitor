@@ -28,7 +28,7 @@ from bs4 import BeautifulSoup
 
 # --- Configuração da busca ---
 # Ajuste aqui o termo de busca, se precisar monitorar outro termo/pessoa.
-SEARCH_QUERY = '"VICTOR HUGO HERNANDES TAMBORLIN"'  # busca exata (entre aspas)
+SEARCH_QUERY = '"FABRICIO ALASTICO"'  # busca exata (entre aspas)
 SEARCH_SECTIONS = "todos"  # 'todos' = todas as seções (1, 2 e 3)
 SEARCH_EXACT_DATE = "all"  # 'all' = sem filtro de data
 
