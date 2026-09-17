@@ -2,8 +2,8 @@ name: Monitorar Publicações DOU
 
 on:
   schedule:
-    # Roda a cada 6 horas (horário UTC). Ajuste como quiser.
-    - cron: "30 */6 * * *"
+    # Roda de segunda a sexta às 10:00 (horário de Brasília, UTC-3).
+    - cron: "0 13 * * 1-5"
   workflow_dispatch: {}  # permite rodar manualmente pelo botão "Run workflow"
 
 permissions:
